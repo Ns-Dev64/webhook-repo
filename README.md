@@ -19,4 +19,4 @@ pip install -r requirements.txt --user
 flask run
 ```
 
-### To receive webhooks from github you'll have to portforward your server port eg: http://localhost:5000 (you can use ngrok)
+### To receive webhooks from github you'll have to portforward your server port using ngork or router config.
