@@ -9,4 +9,6 @@ def insert_event(data):
     events.insert_one(data)
 
 def get_latest_events(limit=10):
-    return list(events.find().sort("timestamp", -1).limit(limit))
+    
+    # sort the events with timestamps and return in descending order with applied limit
+    return list(events.find().sort("timestamp", -1).limit(limit)) 

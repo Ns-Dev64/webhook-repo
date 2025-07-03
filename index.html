@@ -50,8 +50,12 @@
   <script>
     async function fetchEvents() {
       try {
+
+        // fetch the events and parse them
         const res = await fetch('http://localhost:5000/events');
         const events = await res.json();
+
+        // get the feed element
         const feed = document.getElementById('feed');
 
         if (events.length === 0) {
@@ -59,6 +63,7 @@
           return;
         }
 
+        // iterate through the events and create new divs on the feed element
         feed.innerHTML = '';
         events.forEach(text => {
           const div = document.createElement('div');
